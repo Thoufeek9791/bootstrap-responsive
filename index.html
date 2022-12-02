@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <!-- There are two modes navbar-light and navbar-dark -->
+        <!-- navbar-light -> The text in black and navbar-dark -> The text should be in white -->
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            <img
+              src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+              alt="Somthing went wrong"
+              width="30"
+              height="30"
+              loading="lazy"
+              class="d-inline-block align-top"
+            />
+            Bootstrap Tamil</a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#myNavBar"
+            aria-controls="myNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="navbar.html" class="nav-link active">HOME</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="course.html" class="nav-link">Courses</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Help
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Facebook</a></li>
+                  <li><a class="dropdown-item" href="#">Youtube</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Github</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="myContainer bg-secondary p-5">
+      <div class="container">
+        <h1>Hello</h1>
+        <p>
+          Welcome to the Bootstrap course
+          <i class="fa-regular fa-face-smile text-warning"></i>
+        </p>
+        <hr class="mt-3 bg-primary" />
+        <p>Before learning bootstrap, learn the HTML, CSS & Javascript</p>
+        <hr class="mt-3 bg-primary" />
+        <button class="btn btn-dark">Get Started</button>
+
+        <hr class="mt-3 bg-primary" />
+
+        <h4>Web Desining Courses</h4>
+        <p>Learn these before jumping to backend Technologies</p>
+
+        <!-- TO group the button we have to use btn-group class in the div container -->
+        <!-- To increase the group button size we have to specify btn-group-viewport in the div -->
+        <div
+          class="btn-group btn-group-lg"
+          role="group"
+          aria-label="web designing group button"
+        >
+          <button class="btn btn-dark">HTML5</button>
+          <button class="btn btn-dark">CSS3</button>
+
+          <div
+            class="btn-group btn-group-lg"
+            role="group"
+            aria-label="web desigining group button"
+          >
+            <!-- To implement drop-down toggle we have to use dropdown-bs-toggle class it shows the arrow but it is not working to make it working we have to use data-toggle="dropdown"-->
+            <button
+              class="btn btn-dark dropdown-toggle"
+              data-bs-toggle="dropdown"
+              type="button"
+              id="myBtn"
+            >
+              Javascript
+            </button>
+            <div class="dropdown-menu" aria-labelledby="myBtn">
+              <a href="#" class="dropdown-item">Basic</a>
+              <a href="#" class="dropdown-item">Intermediate</a>
+              <a href="#" class="dropdown-item">Advance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container my-5">
+        <!-- The Basic structure of card is given below which is card-header, card-body, card-footer -->
+        <!-- <div class="card">
+            <div class="card-header bg-primary">
+                <h2 class="text-white">Featured Courses</h2>
+            </div>
+            <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque porro eos cum officia omnis soluta nihil beatae tenetur vero perferendis distinctio nobis accusantium ipsam maiores et maxime eaque, nisi expedita?
+            </div>
+            <div class="card-footer">
+                <p class="text-muted">copy-right by Thoufeek Rahuman</p>
+            </div>
+        </div> -->
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" alt="somthing went wrong" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Learn Javascript in - Tamil</h5>
+                <p class="card-text">master the Javascript in your finger tips and solve complex problems</p>
+                <a href="#" class="btn btn-dark w-100">Enroll Now</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last Updated Oct - 2022</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- The pooper.min.js file is given below -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/3a2330b33b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

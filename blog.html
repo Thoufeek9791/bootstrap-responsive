@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .bootsrtap-color {
+        background-color: #7700b300;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <!-- There are two modes navbar-light and navbar-dark -->
+        <!-- navbar-light -> The text in black and navbar-dark -> The text should be in white -->
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            <img
+              src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+              alt="Somthing went wrong"
+              width="30"
+              height="30"
+              loading="lazy"
+              class="d-inline-block align-top"
+            />
+            Bootstrap Tamil</a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#myNavBar"
+            aria-controls="myNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">HOME</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              <li class="nav-item">
+                <a href="course.html" class="nav-link">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Help
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Facebook</a></li>
+                  <li><a class="dropdown-item" href="#">Youtube</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Github</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid p-5 mb-5" style="background-color: #e0e1dd">
+      <div class="container">
+        <h4>Rahuman Blog</h4>
+        <p class="text-muted">
+          Never miss any important update from the Rahuman Blog
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+            <!-- <ul class="list-group">
+                <li class="list-group-item bg-dark text-white">Categories</li>
+                <li class="list-group-item">HTML</li>
+                <li class="list-group-item">CSS3</li>
+                <li class="list-group-item">JavaScript</li>
+                <li class="list-group-item">Bootstrap</li>
+            </ul> -->
+            <!--TO make clickable list use this below-->
+            <div class="list-group">
+                <li class="list-group-item bg-dark text-white text-center">Categories</li>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" id="html">HTML5 <span class="badge bg-primary rounded-pill">5</span></a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">CSS3 <span class="badge bg-primary rounded-pill">5</span></a></a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">JavaScript <span class="badge bg-primary rounded-pill">5</span></a>
+            </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card">
+            <!--g-0 is the no-gutter which will remove the default margin-left and margin-right in the row container. if you want more information please refer gutter in documentation-->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="somthing went wrong"
+                  class="card-img h-100"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Bootstrap Course Released
+                    <span class="badge bg-primary">New</span>
+                  </h5>
+                  <p class="card-text">
+                    <span class="badge rounded-pill bg-success"
+                      ><i class="fa-solid fa-tv"></i> Web Development</span
+                    >
+                    <span class="badge rounded-pill bg-primary"
+                      ><i class="fa-solid fa-tags"></i> Bootstrap</span
+                    >
+                  </p>
+                  <p class="card-text">
+                    Learn to build responsive and creative websites using
+                    bootstrap css framework. This course will have several
+                    topics explaining about bootstrap and it will help you to
+                    build websites in minutes
+                  </p>
+                  <p class="text-muted float-end">Last Updated 3 min ago</p>
+
+                  <a href="#" class="btn btn-dark w-100"
+                    ><i class="fa-solid fa-newspaper"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The pooper.min.js file is given below -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/3a2330b33b.js"
+      crossorigin="anonymous"
+    ></script>
+
+<script>
+  const card = document.querySelector(".card");
+  const html = document.getElementById('html');
+
+  html.addEventListener('click', (e) => {
+    card.style.display = "block";
+    card.style.transition = "all 0.5s"
+  })
+
+</script>
+
+  </body>
+</html>
